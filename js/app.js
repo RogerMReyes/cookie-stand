@@ -1,5 +1,6 @@
 'use strict';
 
+let storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm']
 let cookieSection = document.getElementById('cookie-table');
 
 function randomCustomer(min, max){
@@ -15,12 +16,12 @@ let seattle = {
   cookiesPerHour: [],
   totalCookies: 0,
   getCustomers: function(){
-    for(let i = 0; i < 14; i++){
+    for(let i = 0; i < storeHours.length; i++){
       this.customersPerHour.push(randomCustomer(this.minCustomers,this.maxCustomers));
     }
   },
   storeCookieData: function(){
-    for(let i = 0; i < 14; i++){
+    for(let i = 0; i < storeHours.length; i++){
       let cookieSales = Math.floor(this.avgCookies * this.customersPerHour[i]);
       this.cookiesPerHour.push(cookieSales);
       this.totalCookies += cookieSales;
@@ -38,24 +39,11 @@ let seattle = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for(let i = 0; i < this.cookiesPerHour.length-7; i++){
-      let time = i+6;
+    for(let i = 0; i < storeHours.length; i++){
       let liElem = document.createElement('li');
-      if(time < 12){
-        liElem.textContent = `${time}am: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      } else {
-        liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      }
-    }
-    for(let i = 7; i < this.cookiesPerHour.length; i++){
-      let time = i-6;
-      let liElem = document.createElement('li');
-      liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
       ulElem.appendChild(liElem);
     }
-
     let liElem = document.createElement('li');
     liElem.textContent = `Total: ${this.totalCookies} cookies`;
     ulElem.appendChild(liElem);
@@ -98,24 +86,11 @@ let tokyo = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for(let i = 0; i < this.cookiesPerHour.length-7; i++){
-      let time = i+6;
+    for(let i = 0; i < storeHours.length; i++){
       let liElem = document.createElement('li');
-      if(time < 12){
-        liElem.textContent = `${time}am: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      } else {
-        liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      }
-    }
-    for(let i = 7; i < this.cookiesPerHour.length; i++){
-      let time = i-6;
-      let liElem = document.createElement('li');
-      liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
       ulElem.appendChild(liElem);
     }
-
     let liElem = document.createElement('li');
     liElem.textContent = `Total: ${this.totalCookies} cookies`;
     ulElem.appendChild(liElem);
@@ -158,24 +133,11 @@ let dubai = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for(let i = 0; i < this.cookiesPerHour.length-7; i++){
-      let time = i+6;
+    for(let i = 0; i < storeHours.length; i++){
       let liElem = document.createElement('li');
-      if(time < 12){
-        liElem.textContent = `${time}am: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      } else {
-        liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      }
-    }
-    for(let i = 7; i < this.cookiesPerHour.length; i++){
-      let time = i-6;
-      let liElem = document.createElement('li');
-      liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
       ulElem.appendChild(liElem);
     }
-
     let liElem = document.createElement('li');
     liElem.textContent = `Total: ${this.totalCookies} cookies`;
     ulElem.appendChild(liElem);
@@ -218,24 +180,11 @@ let paris = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for(let i = 0; i < this.cookiesPerHour.length-7; i++){
-      let time = i+6;
+    for(let i = 0; i < storeHours.length; i++){
       let liElem = document.createElement('li');
-      if(time < 12){
-        liElem.textContent = `${time}am: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      } else {
-        liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      }
-    }
-    for(let i = 7; i < this.cookiesPerHour.length; i++){
-      let time = i-6;
-      let liElem = document.createElement('li');
-      liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
       ulElem.appendChild(liElem);
     }
-
     let liElem = document.createElement('li');
     liElem.textContent = `Total: ${this.totalCookies} cookies`;
     ulElem.appendChild(liElem);
@@ -278,24 +227,11 @@ let lima = {
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
 
-    for(let i = 0; i < this.cookiesPerHour.length-7; i++){
-      let time = i+6;
+    for(let i = 0; i < storeHours.length; i++){
       let liElem = document.createElement('li');
-      if(time < 12){
-        liElem.textContent = `${time}am: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      } else {
-        liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
-        ulElem.appendChild(liElem);
-      }
-    }
-    for(let i = 7; i < this.cookiesPerHour.length; i++){
-      let time = i-6;
-      let liElem = document.createElement('li');
-      liElem.textContent = `${time}pm: ${this.cookiesPerHour[i]} cookies`;
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
       ulElem.appendChild(liElem);
     }
-
     let liElem = document.createElement('li');
     liElem.textContent = `Total: ${this.totalCookies} cookies`;
     ulElem.appendChild(liElem);
