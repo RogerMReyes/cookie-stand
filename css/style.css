@@ -11,28 +11,18 @@ h1{
 h2{
   font-size: 2em;
 }
-article{
-  border-radius: 10px;
-  margin: 2%;
-  padding: 2%;
-  background-color: black;
-  width: 50%;
-}
-ul {
-  background-color: seagreen;
-  padding: 2%;
-  list-style: circle;
-  list-style-position: inside;
-  margin: 2%;
-}
-ul li{
-  font-size: 1.2em;
-  line-height: 150%;
+main img{
+  display: block;
+  margin: auto;
 }
 
 table{
   background-color: teal;
-  width: 100%;
+  border: 5px solid turquoise;
+  width: 90%;
+  border-radius: 10px;
+  margin: auto;
+  
 }
 
 th{
@@ -49,4 +39,10 @@ td{
   width: 6.25%;
   padding-top: 2%;
   padding-bottom: 2%;
+}
+footer{
+  position: absolute;
+  bottom: 10px;
+  font-size: 2em;
+
 }

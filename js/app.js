@@ -79,8 +79,9 @@ function headerRow(){
   let row1 = document.createElement('tr');
   tableElem.appendChild(row1);
 
-  let blankCell = document.createElement('td');
-  row1.appendChild(blankCell);
+  let locationCell = document.createElement('th');
+  locationCell.textContent = 'Location:';
+  row1.appendChild(locationCell);
 
   for(let i = 0; i < storeHours.length; i++){
     let timeElem = document.createElement('th');
