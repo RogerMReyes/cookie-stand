@@ -1,6 +1,6 @@
 body{
-  font-family: Arial, Helvetica, sans-serif;
   background-color: teal;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h1{
   font-size: 3em;
@@ -11,7 +11,11 @@ h1{
   background-color: indianred;
   color: white;
 }
+h2{
+  font-size: 2em;
+}
 nav{
+  height: 10%;
   padding: 10px;
   font-size: 2em;
   display: flex;
@@ -24,52 +28,52 @@ nav a{
 }
 main{
   background-color: teal;
-  text-align: center;
+  margin-bottom: 30px;
 }
-section{
-  width: 80%;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  align-items: center;
-  text-align: center;
+
+#section1{
+  font-size: 2em;
   background-color: indianred;
-  border-radius: 15px;
-  margin-top: 30px;
-  font-size: 2em;
-}
-section div{
-  margin-right: 30px;
-  margin-left: 30px;
-}
-section h2{
-  font-size: 2em;
-}
-article{
-  width: 79%;
-  margin-left: auto;
-  margin-right: auto;
   padding: 30px;
-  background-color: indianred;
+  width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  text-align: center;
+  justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  margin-top: 30px;
-  font-size: 2em;
 }
-p{
-  margin-top: 1%;
-  margin-bottom: 1%;
+
+
+#section2 article{
+  width: 1500px;
+  background-color: indianred;
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+font-size: 2em;
+}
+
+#section2 article p{
+  padding: 50px;
+}
+
+#section3{
+  margin-top: 50px;
+  text-align: center;
+}
+
+#section3 p{
+  margin-bottom: 20px;
+  font-size: 2em;
 }
 
 footer{
+
   display: flex;
-  margin-top: 30px;
-  font-size: 1.8em;
   justify-content: space-between;
-  align-items:center;
+  color: wheat;
+  font-size: 2em;
   background-color: black;
-  color: white;
 }
