@@ -15,11 +15,17 @@ main img{
   display: block;
   margin: auto;
 }
-
+#cookie-table{
+  border: 10px solid black;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
 table{
   background-color: teal;
-  border: 5px solid turquoise;
-  width: 90%;
+  /* border: 5px solid turquoise; */
+  width: 100%;
   border-radius: 10px;
   margin: auto;
   
@@ -27,22 +33,23 @@ table{
 
 th{
   background-color: indianred;
-  border: 2px solid turquoise;
+  border: 5px solid turquoise;
   color: black;
   vertical-align: middle;
   text-align: center;
   width: 6.25%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 td{
-  border: 2px solid turquoise;
+  border: 5px solid turquoise;
   text-align: center;
+  vertical-align: middle;
   width: 6.25%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  /* padding-top: 2%;
+  padding-bottom: 2%; */
 }
 footer{
-  position: absolute;
-  bottom: 10px;
   font-size: 2em;
-
+  text-align: center;
 }
