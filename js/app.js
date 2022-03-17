@@ -4,6 +4,7 @@ let storeHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm'
 let storeLocations = [];
 let grandTotalCookies = 0;
 let cookieSection = document.getElementById('cookie-table');
+let myForm = document.getElementById('salmon-form');
 
 function randomCustomer(min, max){
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -127,6 +128,30 @@ function renderAllLocations(){
 headerRow();
 renderAllLocations();
 footerRow();
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  let name = event.target.locationName.value;
+  let minCustomers = event.target.minCustomer.value;
+  let maxCustomers = event.target.maxCustomer.value;
+  let avgCookies = event.target.avgCookies.value;
+
+  let newLocation = new Location(name, minCustomers, maxCustomers, avgCookies);
+
+  let deleteElem = document.getElementById('cookie-table').lastChild;
+  cookieSection.removeChild(deleteElem);
+
+  grandTotalCookies = 0;
+  newLocation.getCustomers();
+  newLocation.storeCookieData();
+  newLocation.render();
+  footerRow();
+}
+
+myForm.addEventListener('submit', handleSubmit);
+
+
 
 // let seattle = {
 //   name: 'Seattle',
